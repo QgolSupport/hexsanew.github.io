@@ -1,0 +1,56 @@
+<script src="http://www.google.com/jsapi?key=AB">
+</script>
+<script type="text/javascript" >
+google.load("mootools", "1.2.1");
+var content;
+var blue = false;
+var pink = false;
+var green = false;
+
+// This function is called every 1000 miliseconds
+function tweenColor() {
+var myFx = new Fx.Tween(content);
+if (!blue) {
+myFx.start('color', '#52ABCC');
+blue = true;
+}
+else if (!pink) {
+myFx.start('color', '#EE5588');
+pink = true;
+}
+else if (!green) {
+myFx.start('color', '#7daa13');
+green = true;
+}
+else
+{
+myFx.start('color', '#c1c1c1');
+blue = false;
+pink = false;
+green = false;
+}
+}
+function OnLoad(){
+content = document.getElementById('content');
+content.innerHTML = "India's First Fully Automated Plant";
+// call tweenColor every 1000 miliseconds
+window.setInterval(tweenColor, 1000);
+}
+google.setOnLoadCallback(OnLoad);
+</script>
+<style>
+
+#content
+{
+font-family:'Georgia',Times New Roman, Times;
+font-size:24px;
+color:#c1c1c1;
+font-weight:bold;
+text-align:center;
+}
+</style>
+
+
+<body>
+<div id="content" style="color:#7daa13">First Fully Automated Unit in India.</div>
+</body>

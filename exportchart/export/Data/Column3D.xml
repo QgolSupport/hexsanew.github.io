@@ -1,0 +1,18 @@
+<graph caption="Harry&apos;s SuperMart"
+subcaption="This week&apos;s sale of Apparels"
+xAxisName="Day of the week" yAxisName="Amount"
+numberPrefix="$"
+exportEnabled="1"
+exportAtClient="1"
+exportHandler="exportComponent"
+exportFileName="SuperMart Report"
+exportFormats="PNG=Export chart as Image|PDF=Export chart as
+PDF" exportDialogMessage="Exporting Report: ">
+<set label="Sun" value="18900" />
+<set label="Mon" value="13400" />
+<set label="Tue" value="10300" />
+<set label="Wed" value="7600" />
+<set label="Thu" value="14700" />
+<set label="Fri" value="16500" />
+<set label="Sat" value="22600" />
+</graph>

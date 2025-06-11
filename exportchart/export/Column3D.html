@@ -1,0 +1,39 @@
+<!Doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>FusionCharts Free Documentation</title>
+<link rel="stylesheet" href="../Contents/Style.css" type="text/css" />
+
+<script type="text/javascript" src="../JSClass/FusionCharts.js"></script>
+<script type="text/javascript" src="../JSClass/FusionChartsExportComponent.js"></script>
+
+</head>
+
+<body">
+<table width="98%" border="0" cellspacing="0" cellpadding="3" align="center">
+  <tr> 
+    <td valign="top" class="text" align="center">
+	 <div id="chartdiv" align="center">     FusionCharts. </div>
+		
+	 <div id="exporterContainer"></div>
+
+
+       		<script type="text/javascript">
+		   var chart = new FusionCharts("../Charts/Column3D.swf", "ChartId", "800", "500");
+var exportComponentObj = new FusionChartsExportObject("exportComponent","../Charts/FCExporter.swf");
+		   
+			
+		   chart.setDataURL("Data/Column3D.xml");		   
+		   chart.render("chartdiv");
+		  exportComponentObj.Render("exporterContainer");
+		
+		</script> </td>
+  </tr>
+  <tr>
+    <td valign="top" class="text" align="center">&nbsp;</td>
+  </tr>
+
+</table>
+</body>
+</html>
